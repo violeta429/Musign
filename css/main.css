@@ -1,4 +1,4 @@
-/*fonts*/
+fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 .eng-font{font-family: 'Ubuntu', sans-serif;}
 p{color: #838383; font-size: 14px;}
@@ -53,9 +53,9 @@ body{
 #nav-btn{ display: none; }
 
 .nav-btn{ 
- width: 80px;
- height: 60px;
- padding: 12px 14px;
+ width: 66px;
+ height: 58px;
+ padding: 11px 16px;
  position:fixed;
  box-sizing: border-box;
  cursor: pointer;
@@ -66,23 +66,37 @@ body{
 .nav-btn span{
 display: block;
 position: absolute;
-width: 50px;
+width: 40px;
 height: 1px;
 background-color: #000;
+transition: 0.3s;
 }
 
 .nav-btn span:nth-child(1){
-  top: calc(100% - 16px);
-  width: 33px;
+  top: calc(100% - 22px);
+  width: 25px;
 }
 
 .nav-btn span:nth-child(2){
-  top: calc(50% - 2px);
-  width: 33px;
+  top: calc(50% - 6px);
+  width: 25px;
 }
 
+/*===========버튼 클릭 시 네비게이션 활성화=============  */
+input[id="nav-btn"]:checked + .nav-btn span:nth-child(1){
+  width: 40px;
+  top: 50%;
+  transform: rotate(45deg);
+}
 
+input[id="nav-btn"]:checked + .nav-btn span:nth-child(2){
+ opacity: 0;
+}
 
+input[id="nav-btn"]:checked + .nav-btn span:nth-child(3){
+  top: 50%;
+  transform: rotate(-45deg);
+}
 
 
 /* ============================
@@ -676,4 +690,4 @@ footer h4{
 }
 
 
-}   /*@media*/
+}   /*@media
